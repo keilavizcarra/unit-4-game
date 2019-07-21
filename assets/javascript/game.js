@@ -1,110 +1,111 @@
  $(document).ready(function() {
+     console.log("ready!");
 
     var random = Math.floor(Math.random()*102+19);
     
-    $("#totalPoints").text(random);
+    $("#totalNumber").text(random);
     
     var num1 = Math.floor(Math.random()*12+1);
     var num2 = Math.floor(Math.random()*12+1);
     var num3 = Math.floor(Math.random()*12+1);
     var num4 = Math.floor(Math.random()*12+1);
     
-    var totalPoints= 0;
+    var totalNumber= 0;
     var wins = 0;
     var losses = 0;
     
-    $("#Wins").text(wins);
-    $("#Losses").text(losses);
+    $("#wins").text(wins);
+    $("#losses").text(losses);
     
     function reset() {
         random = Math.floor(Math.random()*102+19);
         console.log(random);
-        $("#totalPoints").text(random);
+        $("#randomNumber").text(random);
         var num1 = Math.floor(Math.random()*12+1);
         var num2 = Math.floor(Math.random()*12+1);
         var num3 = Math.floor(Math.random()*12+1);
         var num4 = Math.floor(Math.random()*12+1);
         userTotal = 0;
-        $("#score").text(totalPoints);
+        $("#score").text(totalNumber);
     }
     
-    function winner() {
+    function win() {
         alert("You Won!");
         wins++;
-        $("#numberWins").text(wins);
+        $("#wins").text(wins);
         reset();
     }
     
-    function loser() {
+    function losses() {
         alert("You Lose!");
         losses++;
-        $("#numberLosses").text(losses);
+        $("#losses").text(losses);
         reset();
     }
     
     $("#button1").on("click", function() {
-        totalPoints= userTotal + num1;
-        console.log("New userTotal " + totalPoints);
-        $("#score").text(totalPoints);
+        totalNumber= totalNumber+ num1;
+        console.log("totalScore" + totalNumber);
+        $("#score").text(totalNumber);
     
-        if (totalPoints=== random) {
+        if (totalNumber=== random) {
             win()
         }
     
-        else if (totalPoints > random) {
-            loser()
+        else if (totalNumber>= random) {
+            losses()
         } 
 
 
-    })
+    });
 
     $("#button2").on("click", function() {
-        totalPoints = totalPoints + num1;
-        console.log("New userTotal " + totalPoints);
-        $("#score").text(totalPoints);
+        totalNumber = totalNumber+ num1;
+        console.log("totalScore " + totalNumber);
+        $("#score").text(totalNumber);
     
-        if (totalPoints === random) {
+        if (totalNumber === random) {
             win()
         }
     
-        else if (totalPoints > random) {
-            loser()
+        else if (totalNumber>= random) {
+            losses()
         } 
 
 
-    })
+    });
 
 
     $("#button3").on("click", function() {
-        totalPoints = totalPoints + num1;
-        console.log("New userTotal " + totalPoints);
-        $("#score").text(totalPoints);
+        totalNumber = totalNumber + num1;
+        console.log("totalScore " + totalNumber);
+        $("#score").text(totalNumber);
     
-        if (totalPoints === random) {
+        if (totalNumber=== random) {
             win()
         }
     
-        else if (totalPoints> random) {
-            loser()
+        else if (totalNumber>=random) {
+            losses()
         } 
 
 
-    })
+    });
 
  $("#button4").on("click", function() {
-        totalPoints = totalPoints + num1;
-        console.log("New userTotal " + totalPoints);
-        $("#totalPoints").text(totalPoints);
+        totalNumber = totalNumber+ num1;
+        console.log("totalScore " + totalNumber);
+        $("#score").text(totalNumber);
     
-        if (totalPoints === random) {
+        if (totalNumber === random) {
             win()
         }
     
-        else if (totalPoints> random) {
-            loser()
+        else if (totalNumber>=random) {
+            losses()
         } 
 
 
-    })
+    });
     });
 
