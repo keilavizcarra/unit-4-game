@@ -1,0 +1,63 @@
+body {
+    background: #f8bbd0;
+    
+    
+}
+
+ #heading {
+    font-family: 'Indie Flower', cursive;
+    background:  #fff9c4;
+    font-size: 50px;
+    text-transform: uppercase;
+
+}
+
+#Instructions { 
+  font-family: 'Indie Flower', cursive;
+  background:white; 
+  
+
+
+}
+
+.container {
+    text-align: center;
+}
+
+#Crystals {
+    background: black;
+
+    
+}
+
+#wins {
+    background: #ede7f6;
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+
+}
+
+#losses {
+    background: #ede7f6;
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+
+}
+
+
+#totalPoints {
+    background: #ede7f6;
+    font-size: 40px;
+    font-family: 'Indie Flower', cursive;
+
+}
+
+#numberSection {
+    background: #ede7f6;
+    font-size: 40px;
+    font-family: 'Indie Flower', cursive;
+
+}
+
+
+
